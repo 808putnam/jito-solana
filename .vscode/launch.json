@@ -6,9 +6,10 @@
         // multinode-demo/common.sh
         // net/common.sh
         {
-            "name": "solana-validator",
+            "name": "jito-solana-validator",
             "type": "lldb",
             "request": "launch",
+            "preLaunchTask": "node-setup",
             "program": "${workspaceFolder}/target/debug/solana-validator",
             "args": [
                 "--ledger", "${workspaceFolder}/config/bootstrap-validator",
@@ -35,9 +36,10 @@
         // and then integrating guidance from here:
         // https://docs.solanalabs.com/operations/setup-an-rpc-node
         {
-            "name": "solana-rpc-node",
+            "name": "jito-solana-rpc-node",
             "type": "lldb",
             "request": "launch",
+            "preLaunchTask": "node-setup",
             "program": "${workspaceFolder}/target/debug/solana-validator",
             "args": [
                 "--ledger", "${workspaceFolder}/config/bootstrap-validator",
